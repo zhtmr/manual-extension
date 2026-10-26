@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "id": "demo-local",
+    "name": "로컬 fixture 데모 사이트",
+    "origins": ["http://localhost:8787"]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "match": { "type": "exact", "pattern": "/" },
+      "title": "업무 포털 홈",
+      "role": "업무 포털의 첫 화면입니다. 상단 메뉴로 각 업무 화면에 들어가고, 통합 검색으로 공지와 자료를 찾습니다.",
+      "features": [
+        { "name": "주 메뉴", "description": "공지사항, 주문 관리, 메시지함, 자료실 화면으로 이동합니다." },
+        { "name": "통합 검색", "description": "검색어와 분류를 정해 공지와 자료를 찾습니다." },
+        { "name": "최근 공지", "description": "최근에 올라온 공지의 번호, 제목, 작성일을 표로 보여줍니다." }
+      ],
+      "howTo": [
+        {
+          "task": "공지와 자료 검색하기",
+          "steps": [
+            "「검색어」 칸에 찾을 단어를 입력합니다.",
+            "「분류」에서 공지 또는 자료를 고릅니다.",
+            "「검색」 버튼을 누릅니다."
+          ],
+          "targets": ["#q", "#category", "#btnSearch"]
+        },
+        {
+          "task": "검색 조건 지우기",
+          "steps": ["「초기화」 버튼을 누릅니다."],
+          "targets": ["#btnReset"]
+        }
+      ],
+      "tips": ["검색어는 두 글자 이상 입력해야 합니다."],
+      "related": ["notice-view", "spa-home", "hash-inbox"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "notice-view",
+      "match": { "type": "glob", "pattern": "/notice/*" },
+      "title": "공지 상세",
+      "role": "공지 한 건의 내용을 확인하는 화면입니다. 다른 공지로 넘어가거나 공지를 인쇄할 수 있습니다.",
+      "features": [
+        { "name": "공지 이동", "description": "101번, 102번 공지 링크로 다른 공지를 엽니다." },
+        { "name": "인쇄", "description": "현재 공지를 인쇄합니다." }
+      ],
+      "howTo": [
+        {
+          "task": "공지 인쇄하기",
+          "steps": ["「인쇄」 버튼을 누릅니다."],
+          "targets": ["#btnPrint"]
+        },
+        {
+          "task": "포털 홈으로 돌아가기",
+          "steps": ["「목록으로」 링크를 누릅니다."],
+          "targets": ["#linkList"]
+        }
+      ],
+      "related": ["home"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "spa-home",
+      "match": { "type": "exact", "pattern": "/spa" },
+      "title": "주문 관리 홈",
+      "role": "주문 업무의 첫 화면입니다. 오늘 처리할 주문 건수를 확인하고 주문 목록으로 이동합니다.",
+      "features": [
+        { "name": "처리 대기 안내", "description": "오늘 처리할 주문 건수를 안내 문구로 보여줍니다." },
+        { "name": "주문 메뉴", "description": "주문 목록, 새 주문, 주문 상세 화면으로 이동합니다." }
+      ],
+      "howTo": [
+        {
+          "task": "주문 목록 열기",
+          "steps": ["「주문 목록 보기」 버튼을 누릅니다."],
+          "targets": ["#btnGoOrders"]
+        }
+      ],
+      "related": ["spa-orders", "spa-order-new"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "spa-orders",
+      "match": { "type": "exact", "pattern": "/spa/orders" },
+      "title": "주문 목록",
+      "role": "접수된 주문을 목록으로 보고 상태별로 걸러 보는 화면입니다. 새 주문 등록도 여기서 시작합니다.",
+      "features": [
+        { "name": "상태 필터", "description": "「상태」에서 전체, 접수, 출고 중 하나를 골라 목록을 좁힙니다." },
+        { "name": "주문 목록 표", "description": "주문번호, 고객명, 상태를 보여주고 주문번호를 누르면 상세 화면으로 갑니다." }
+      ],
+      "howTo": [
+        {
+          "task": "새 주문 등록 시작하기",
+          "steps": ["「새 주문」 버튼을 누릅니다.", "새 주문 등록 화면이 열리면 내용을 입력합니다."],
+          "targets": ["#btnNewOrder"]
+        },
+        {
+          "task": "상태로 주문 걸러 보기",
+          "steps": ["「상태」 목록에서 원하는 상태를 고릅니다."],
+          "targets": ["#statusFilter"]
+        }
+      ],
+      "related": ["spa-order-new", "spa-order-view"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "spa-order-new",
+      "match": { "type": "exact", "pattern": "/spa/orders/new" },
+      "title": "새 주문 등록",
+      "role": "새 주문의 고객, 상품, 수량, 납기일을 입력해 등록하는 화면입니다.",
+      "features": [
+        { "name": "주문 입력 폼", "description": "고객명, 상품 코드, 수량, 납기일, 메모를 입력합니다." },
+        { "name": "저장과 취소", "description": "입력한 주문을 저장하거나 취소하고 목록으로 돌아갑니다." }
+      ],
+      "howTo": [
+        {
+          "task": "새 주문 저장하기",
+          "steps": [
+            "「고객명」과 「상품 코드」를 입력합니다.",
+            "「수량」과 「납기일」을 입력합니다.",
+            "필요하면 「메모」에 전달 사항을 적습니다.",
+            "「저장」 버튼을 누릅니다."
+          ],
+          "targets": ["#customerName", "#productCode", "#quantity", "#deliveryDate", "#btnSave"]
+        },
+        {
+          "task": "입력 취소하기",
+          "steps": ["「취소」 버튼을 누르면 주문 목록으로 돌아갑니다."],
+          "targets": ["#btnCancel"]
+        }
+      ],
+      "tips": ["고객명과 상품 코드는 반드시 입력해야 합니다."],
+      "related": ["spa-orders"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "spa-order-view",
+      "match": { "type": "glob", "pattern": "/spa/orders/*" },
+      "title": "주문 상세",
+      "role": "주문 한 건의 정보와 처리 상태를 확인하는 화면입니다.",
+      "features": [
+        { "name": "주문 정보", "description": "주문번호와 처리 상태를 보여줍니다." }
+      ],
+      "howTo": [
+        {
+          "task": "주문 목록으로 돌아가기",
+          "steps": ["「목록」 버튼을 누릅니다."],
+          "targets": ["#btnBackToList"]
+        }
+      ],
+      "related": ["spa-orders"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "hash-inbox",
+      "match": { "type": "exact", "pattern": "/inbox", "hash": true },
+      "title": "받은 메시지",
+      "role": "나에게 온 메시지 목록을 확인하고 새 메시지를 쓰는 화면입니다.",
+      "features": [
+        { "name": "메시지 목록", "description": "받은 메시지의 제목을 목록으로 보여줍니다." },
+        { "name": "새 메시지", "description": "새 메시지 작성을 시작합니다." }
+      ],
+      "howTo": [
+        {
+          "task": "목록 새로 고치기",
+          "steps": ["「새로 고침」 버튼을 누릅니다."],
+          "targets": ["#btnRefresh"]
+        },
+        {
+          "task": "새 메시지 쓰기",
+          "steps": ["「새 메시지」 버튼을 누릅니다."],
+          "targets": ["#btnCompose"]
+        }
+      ],
+      "related": ["hash-settings"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    },
+    {
+      "id": "hash-settings",
+      "match": { "type": "exact", "pattern": "/settings", "hash": true },
+      "title": "메시지 설정",
+      "role": "메시지에 표시할 이름과 이메일 알림 여부를 정하는 화면입니다.",
+      "features": [
+        { "name": "표시 이름", "description": "보낸 사람에 표시할 이름을 정합니다." },
+        { "name": "이메일 알림", "description": "새 메시지가 오면 이메일로 알릴지 정합니다." }
+      ],
+      "howTo": [
+        {
+          "task": "설정 바꾸기",
+          "steps": [
+            "「표시 이름」을 입력합니다.",
+            "「이메일 알림 받기」를 켜거나 끕니다.",
+            "「설정 저장」 버튼을 누릅니다."
+          ],
+          "targets": ["#displayName", "#notifyEmail", "#btnSaveSettings"]
+        }
+      ],
+      "related": ["hash-inbox"],
+      "updatedAt": "2026-10-23",
+      "source": "authored"
+    }
+  ]
+}

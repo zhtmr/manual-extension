@@ -1,0 +1,10 @@
+body { font: 15px/1.6 system-ui, "Malgun Gothic", sans-serif; margin: 0; color: #222; }
+header { background: #23395d; color: #fff; padding: 10px 20px; }
+header a { color: #fff; margin-right: 16px; }
+main { padding: 20px; max-width: 900px; }
+form { display: grid; gap: 10px; max-width: 420px; margin: 12px 0; }
+label { display: grid; gap: 4px; }
+table { border-collapse: collapse; margin: 12px 0; }
+th, td { border: 1px solid #bbb; padding: 4px 10px; }
+.notice, .help { background: #fff7d6; padding: 8px 12px; border-left: 4px solid #e0b100; }
+section { margin-top: 24px; }

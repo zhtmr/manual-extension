@@ -1,0 +1,5 @@
+# 배포 산출물: node tools/package-extension.mjs 가 만든다
+dist/
+
+# 하네스 실행 중간 산출물(설계·QA 보고서 등 로컬 기록)
+_workspace/

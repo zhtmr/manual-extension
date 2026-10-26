@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>페이지 매뉴얼</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <header class="panel-header">
+    <div class="panel-header-row">
+      <h1 id="pageTitle" class="panel-title">페이지 매뉴얼</h1>
+      <span id="sourceBadge" class="badge" hidden></span>
+    </div>
+    <div class="panel-header-row panel-header-meta">
+      <span id="pageUrl" class="page-url"></span>
+      <button id="btnSettings" class="link-button" type="button">설정</button>
+    </div>
+  </header>
+  <main id="content" class="panel-body" aria-live="polite"></main>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>

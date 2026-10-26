@@ -1,0 +1,18 @@
+{
+  "pages": [
+    { "pageId": "home", "url": "http://localhost:8787/" },
+    { "pageId": "notice-view", "url": "http://localhost:8787/notice/101" },
+    { "pageId": "notice-view", "url": "http://localhost:8787/notice/102" },
+    { "pageId": "spa-home", "url": "http://localhost:8787/spa" },
+    { "pageId": "spa-orders", "url": "http://localhost:8787/spa/orders" },
+    { "pageId": "spa-order-new", "url": "http://localhost:8787/spa/orders/new" },
+    { "pageId": "spa-order-view", "url": "http://localhost:8787/spa/orders/1001" },
+    { "pageId": "hash-inbox", "url": "http://localhost:8787/hash#/inbox" },
+    { "pageId": "hash-settings", "url": "http://localhost:8787/hash#/settings" }
+  ],
+  "noManual": [
+    "http://localhost:8787/nomanual",
+    "http://localhost:8787/hash#/unknown",
+    "http://localhost:8787/hash"
+  ]
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:,">
+  <title>업무 포털 홈</title>
+  <link rel="stylesheet" href="/fixture.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="주 메뉴">
+      <a id="navHome" href="/">홈</a>
+      <a id="navNotice" href="/notice/101">공지사항</a>
+      <a id="navSpa" href="/spa">주문 관리</a>
+      <a id="navHash" href="/hash#/inbox">메시지함</a>
+      <a id="navNoManual" href="/nomanual">자료실</a>
+    </nav>
+  </header>
+  <main>
+    <h1>업무 포털 홈</h1>
+    <p class="notice">시험용 fixture 페이지입니다. 실제 데이터는 없습니다.</p>
+    <p><a id="linkGuide" href="#guide">이용 안내로 이동</a></p>
+
+    <h2>통합 검색</h2>
+    <form id="searchForm" action="/" method="get">
+      <label for="q">검색어</label>
+      <input id="q" name="q" type="text" placeholder="제목 또는 내용" value="SECRET-VALUE-1">
+      <label for="approvalPw">승인 비밀번호</label>
+      <input id="approvalPw" name="approvalPw" type="password">
+      <input id="sessionToken" name="sessionToken" type="hidden" value="SECRET-HIDDEN">
+      <label for="category">분류</label>
+      <select id="category" name="category">
+        <option>SECRET-OPTION</option>
+        <option>공지</option>
+        <option>자료</option>
+      </select>
+      <small>검색어는 두 글자 이상 입력하세요.</small>
+      <button id="btnSearch" type="submit">검색</button>
+      <input id="btnReset" type="reset" value="초기화">
+    </form>
+
+    <h2>최근 공지</h2>
+    <table id="recentNotices">
+      <caption>최근 공지</caption>
+      <thead><tr><th>번호</th><th>제목</th><th>작성일</th></tr></thead>
+      <tbody>
+        <tr><td>101</td><td>SECRET-CELL</td><td>2026-10-20</td></tr>
+        <tr><td>102</td><td>시스템 점검 안내</td><td>2026-10-21</td></tr>
+      </tbody>
+    </table>
+
+    <p id="longText">이 문단은 개인정보 시험용 긴 본문입니다. 확장 프로그램의 구조 추출 기능은 일반 본문 문단을 외부로 보내지 않아야 합니다. 이 문단에는 업무 내용처럼 보이는 문장이 길게 이어집니다. 결재 문서의 처리 기한은 부서별로 다르며, 담당자는 매주 월요일 오전에 지난주 처리 현황을 정리해 팀장에게 보고합니다. 보고서에는 처리 건수, 반려 건수, 지연 사유를 적습니다. 지연 사유가 반복되면 다음 달 업무 회의에서 개선 방안을 논의합니다. 이 문장들은 400자를 넘기기 위한 채움 문장이며 실제 업무 규칙이 아닙니다. 다시 한 번 강조하면 이 문단 전체는 외부 전송 대상에서 빠져야 합니다. 시험 담당자는 추출 결과에 이 문단의 일부라도 들어 있는지 확인합니다. 마지막으로 이 문장은 길이를 넉넉하게 맞추기 위해 덧붙인 문장이며, 표 본문 셀이나 입력값과 마찬가지로 구조 추출 결과와 Claude API 요청 본문 어디에도 나타나면 안 됩니다.</p>
+
+    <section id="guide">
+      <h2>이용 안내</h2>
+      <p class="help">상단 메뉴에서 업무 화면으로 이동할 수 있습니다.</p>
+    </section>
+  </main>
+</body>
+</html>

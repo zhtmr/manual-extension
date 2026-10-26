@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>페이지 매뉴얼 설정</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="page">
+    <h1>페이지 매뉴얼 설정</h1>
+    <p class="lead">작성된 매뉴얼이 없는 화면에서 AI 매뉴얼을 만들 때 쓰는 설정입니다. 설정은 이 브라우저에만 저장됩니다.</p>
+
+    <section class="card" aria-labelledby="hKey">
+      <h2 id="hKey">Claude API 키</h2>
+      <p class="muted">AI 매뉴얼은 본인의 API 키로 Claude API를 직접 호출합니다. 키는 이 확장의 로컬 저장소에만 두고 다른 곳으로 보내지 않습니다.</p>
+      <p id="keyStatus" class="status"></p>
+      <form id="keyForm" class="row" autocomplete="off">
+        <label class="sr-only" for="keyInput">API 키</label>
+        <input id="keyInput" type="password" placeholder="sk-ant-…" spellcheck="false" autocomplete="off">
+        <button type="submit" class="button">저장</button>
+        <button type="button" id="keyDelete" class="button secondary">삭제</button>
+      </form>
+      <p id="keyMsg" class="msg" role="status"></p>
+    </section>
+
+    <section class="card" aria-labelledby="hModel">
+      <h2 id="hModel">모델</h2>
+      <p class="muted">기본값은 빠르고 저렴한 모델입니다. 목록에 없는 모델 ID도 입력할 수 있습니다.</p>
+      <form id="modelForm" class="row">
+        <label class="sr-only" for="modelInput">모델 ID</label>
+        <input id="modelInput" type="text" list="modelList" spellcheck="false">
+        <datalist id="modelList"></datalist>
+        <button type="submit" class="button">저장</button>
+        <button type="button" id="modelReset" class="button secondary">기본값</button>
+      </form>
+      <p id="modelMsg" class="msg" role="status"></p>
+    </section>
+
+    <section class="card" aria-labelledby="hSites">
+      <h2 id="hSites">AI 매뉴얼 생성 허용 사이트</h2>
+      <p class="muted">여기 있는 사이트에서만, 작성된 매뉴얼이 없을 때 화면 구조(제목, 메뉴, 버튼·입력란 이름, 표 머리글, 안내 문구)를 Claude API로 보냅니다. 입력한 값, 비밀번호, 표 내용, 주소의 검색어는 보내지 않습니다.</p>
+      <ul id="siteList" class="list"></ul>
+      <form id="siteForm" class="row">
+        <label class="sr-only" for="siteInput">사이트 주소</label>
+        <input id="siteInput" type="text" placeholder="https://gw.example.com" spellcheck="false" inputmode="url">
+        <button type="submit" class="button">추가</button>
+      </form>
+      <p id="siteMsg" class="msg" role="status"></p>
+    </section>
+
+    <section class="card" aria-labelledby="hAuthored">
+      <h2 id="hAuthored">작성 매뉴얼 사이트</h2>
+      <p class="muted">작성된 매뉴얼은 권한 없이도 보입니다. 「화면에서 보기」로 요소를 표시하려면 사이트 접근 권한이 필요합니다.</p>
+      <ul id="authoredList" class="list"></ul>
+      <div class="row">
+        <button type="button" id="authoredGrant" class="button">작성 매뉴얼 사이트 접근 허용</button>
+      </div>
+      <p id="authoredMsg" class="msg" role="status"></p>
+    </section>
+
+    <section class="card" aria-labelledby="hCache">
+      <h2 id="hCache">AI 매뉴얼 캐시</h2>
+      <p class="muted">만든 AI 매뉴얼은 7일 동안 다시 쓰고, 최대 500개까지 보관합니다.</p>
+      <p id="cacheStatus" class="status"></p>
+      <div class="row">
+        <button type="button" id="cacheClear" class="button secondary">AI 캐시 비우기</button>
+      </div>
+      <p id="cacheMsg" class="msg" role="status"></p>
+    </section>
+
+    <section class="card" id="devSection" aria-labelledby="hDev" hidden>
+      <h2 id="hDev">개발 정보</h2>
+      <p class="muted">압축 해제로 설치한 개발 버전에서만 보입니다.</p>
+      <dl id="devInfo" class="dev"></dl>
+    </section>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>

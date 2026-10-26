@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "페이지 매뉴얼",
+  "version": "0.1.0",
+  "description": "업무 시스템의 각 화면에서 역할과 조작 방법을 사이드 패널로 보여줍니다.",
+  "minimum_chrome_version": "116",
+  "permissions": ["sidePanel", "storage", "tabs", "webNavigation", "scripting"],
+  "host_permissions": ["https://api.anthropic.com/*", "http://localhost:8787/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "background": { "service_worker": "src/background/service-worker.js", "type": "module" },
+  "side_panel": { "default_path": "src/sidepanel/sidepanel.html" },
+  "options_ui": { "page": "src/options/options.html", "open_in_tab": true },
+  "action": { "default_title": "페이지 매뉴얼 열기" }
+}

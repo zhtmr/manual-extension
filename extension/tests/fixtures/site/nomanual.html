@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="data:,">
+  <title>자료실</title>
+  <link rel="stylesheet" href="/fixture.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="주 메뉴">
+      <a href="/">홈</a>
+      <a href="/notice/101">공지사항</a>
+    </nav>
+  </header>
+  <main>
+    <h1>자료실</h1>
+    <p class="help">이 페이지에는 작성된 매뉴얼이 없습니다(AI 생성 시나리오용).</p>
+    <form id="fileSearch">
+      <label for="fileKeyword">파일 이름</label>
+      <input id="fileKeyword" name="fileKeyword" type="text" placeholder="파일 이름 일부">
+      <button id="btnFileSearch" type="button">자료 찾기</button>
+    </form>
+    <table>
+      <caption>자료 목록</caption>
+      <thead><tr><th>파일</th><th>올린 날짜</th></tr></thead>
+      <tbody><tr><td>양식.xlsx</td><td>2026-10-01</td></tr></tbody>
+    </table>
+    <button id="btnUpload" type="button">자료 올리기</button>
+  </main>
+</body>
+</html>
