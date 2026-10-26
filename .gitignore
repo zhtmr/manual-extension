@@ -3,3 +3,10 @@ dist/
 
 # 하네스 실행 중간 산출물(설계·QA 보고서 등 로컬 기록)
 _workspace/
+
+# 소개 영상 제작 폴더(promo/): 소스만 올리고 큰 산출물·폰트·중간 파일은 제외
+promo/out/
+promo/qa/
+promo/audio/music/
+promo/audio/*.wav
+promo/reel/fonts/

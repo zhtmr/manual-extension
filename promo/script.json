@@ -1,0 +1,192 @@
+{
+  "duration": 48,
+  "lines": [],
+  "scenes": [
+    {
+      "id": "s1",
+      "start": 0
+    },
+    {
+      "id": "s2",
+      "start": 8
+    },
+    {
+      "id": "s3",
+      "start": 12
+    },
+    {
+      "id": "s4",
+      "start": 24
+    },
+    {
+      "id": "s5",
+      "start": 31.4
+    },
+    {
+      "id": "s6",
+      "start": 40
+    }
+  ],
+  "sfx": [
+    {
+      "name": "bubble",
+      "at": "scene.s1+0.35",
+      "align": "start",
+      "gain_db": -5
+    },
+    {
+      "name": "bubble",
+      "at": "scene.s1+1.25",
+      "align": "start",
+      "gain_db": -5
+    },
+    {
+      "name": "bubble",
+      "at": "scene.s1+2.0",
+      "align": "start",
+      "gain_db": -4
+    },
+    {
+      "name": "bubble",
+      "at": "scene.s1+2.75",
+      "align": "start",
+      "gain_db": -4
+    },
+    {
+      "name": "bubble",
+      "at": "scene.s1+3.5",
+      "align": "start",
+      "gain_db": -3
+    },
+    {
+      "name": "bubble",
+      "at": "scene.s1+4.0",
+      "align": "start",
+      "gain_db": -3
+    },
+    {
+      "name": "suck",
+      "at": "scene.s2",
+      "align": "end",
+      "gain_db": -1
+    },
+    {
+      "name": "click",
+      "at": "scene.s3+1.55",
+      "align": "peak",
+      "gain_db": 6
+    },
+    {
+      "name": "swipe",
+      "at": "scene.s3+2.0",
+      "align": "start",
+      "gain_db": 1
+    },
+    {
+      "name": "swipe",
+      "at": "scene.s3+4.0",
+      "align": "start",
+      "gain_db": 1
+    },
+    {
+      "name": "click",
+      "at": "scene.s3+5.55",
+      "align": "peak",
+      "gain_db": 6
+    },
+    {
+      "name": "swipe",
+      "at": "scene.s3+6.0",
+      "align": "start",
+      "gain_db": 1
+    },
+    {
+      "name": "swipe",
+      "at": "scene.s3+8.0",
+      "align": "start",
+      "gain_db": 1
+    },
+    {
+      "name": "click",
+      "at": "scene.s3+9.55",
+      "align": "peak",
+      "gain_db": 6
+    },
+    {
+      "name": "swipe",
+      "at": "scene.s3+10.0",
+      "align": "start",
+      "gain_db": 1
+    },
+    {
+      "name": "click",
+      "at": "scene.s4+1.0",
+      "align": "peak",
+      "gain_db": 6
+    },
+    {
+      "name": "shimmer",
+      "at": "scene.s4+1.5",
+      "align": "start",
+      "gain_db": -3
+    },
+    {
+      "name": "ding",
+      "at": "scene.s4+2.5",
+      "align": "peak",
+      "gain_db": -2
+    },
+    {
+      "name": "scan",
+      "at": "scene.s5+0.6",
+      "align": "end",
+      "gain_db": -2
+    },
+    {
+      "name": "data",
+      "at": "scene.s5+2.2",
+      "align": "start",
+      "gain_db": -2
+    },
+    {
+      "name": "redact",
+      "at": "scene.s5+3.6",
+      "align": "peak",
+      "gain_db": -4
+    },
+    {
+      "name": "cards",
+      "at": "scene.s6+0.15",
+      "align": "start",
+      "gain_db": -2
+    }
+  ],
+  "music": {
+    "file": "audio/music/music_final.wav",
+    "gain_db": -9,
+    "duck": 0.75,
+    "analysis": "audio/music/analysis.json",
+    "automation": [
+      [
+        0,
+        0
+      ],
+      [
+        31.6,
+        0
+      ],
+      [
+        32.4,
+        -7
+      ],
+      [
+        37.5,
+        -7
+      ],
+      [
+        39.9,
+        0
+      ]
+    ]
+  }
+}
